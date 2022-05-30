@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Directional Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 866683424}
   - component: {fileID: 866683423}
   - component: {fileID: 866683422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,6 +313,90 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1197411420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197411423}
+  - component: {fileID: 1197411422}
+  - component: {fileID: 1197411421}
+  m_Layer: 6
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1197411421
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197411420}
+  m_Enabled: 1
+--- !u!20 &1197411422
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197411420}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1197411423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197411420}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.109999955, y: 0.34299994, z: -0.009999752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1686296301}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1477932126
 GameObject:
@@ -425,11 +509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2c55e05da4bc84484b41d68368cd3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 0746befcd16d6a34b8f58a794ac84fa3, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!1 &1686296296
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +523,7 @@ GameObject:
   - component: {fileID: 1686296298}
   - component: {fileID: 1686296297}
   - component: {fileID: 1686296302}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -539,10 +618,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686296296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.54, y: 1.307, z: 5.83}
+  m_LocalPosition: {x: 0, y: 1.28, z: 7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1197411423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -739,10 +819,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68e777b5a32e55142b9d3fe4823ba9d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
-  multiplier: 0
-  desiredVolume: 0
-  vel: 0
 --- !u!114 &2059206996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,16 +843,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7674d813039703b49a754d5ecdf1c462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blood: {fileID: 0}
-  bulletDestroy: {fileID: 1186460959227792, guid: 09606df2b7995b440b783c8397a380f7, type: 3}
-  muzzle: {fileID: 1003272881590578, guid: fe986abfdf1710644ba8670ba84727ff, type: 3}
-  explosion: {fileID: 1696543076509636, guid: 9ad77dbda8e55b3448d47d8b4e97859e, type: 3}
-  bulletHitAudio: {fileID: 1391980118453454, guid: 845055669cc35cc4fa8e55319f61e85a, type: 3}
-  enemyHitAudio: {fileID: 1407886718402194, guid: 9bca6dab14dd1634d84d720cdc6ff3a8, type: 3}
-  gunShotAudio: {fileID: 1645927940719512, guid: 0f7e99ec67f28c74f9921f2387a2159d, type: 3}
-  objectImpactAudio: {fileID: 1148781525523070, guid: b68f0c3dec2e89148b09f3adb6b10a43, type: 3}
-  thumpAudio: {fileID: 0}
-  destructionAudio: {fileID: 1696543076509636, guid: 9ad77dbda8e55b3448d47d8b4e97859e, type: 3}
 --- !u!114 &2059206998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -789,155 +855,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaafaad9cac716f4a8f3334eecf750ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: Step 1
-    clip: {fileID: 8300000, guid: 02a996e64c50425489837eb50996ce76, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step 1
-    clip: {fileID: 8300000, guid: 4df09b7dacc59674c895758f61e24923, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step 1
-    clip: {fileID: 8300000, guid: 55bb4635420382840a5e2667bb2e03a5, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step 1
-    clip: {fileID: 8300000, guid: c5ecb1d421bbcce48a53e780f48fe72c, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step 1
-    clip: {fileID: 8300000, guid: 4df09b7dacc59674c895758f61e24923, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  footsteps:
-  - name: Step
-    clip: {fileID: 8300000, guid: 02a996e64c50425489837eb50996ce76, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step
-    clip: {fileID: 8300000, guid: a6af8a0c34da4104b9c00854c54582e0, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step
-    clip: {fileID: 8300000, guid: a6af8a0c34da4104b9c00854c54582e0, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step
-    clip: {fileID: 8300000, guid: ef55c3b9c421cfe4384a395649f24a68, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step
-    clip: {fileID: 8300000, guid: 090eb7c129149ca409cd67a3a6ca26ba, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step
-    clip: {fileID: 8300000, guid: 82fb5cfaf1eb9be4ea8b59ff6dfe67a4, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Step
-    clip: {fileID: 8300000, guid: 63f5cd38cd6e31643b627ef63fc69c61, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  wallrun:
-  - name: Wal
-    clip: {fileID: 8300000, guid: 85db6a14fc4fb9a41ae909dc14a8470a, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Wal
-    clip: {fileID: 8300000, guid: b1f7b5cfabd2b714a83bd8586afec8ec, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Wal
-    clip: {fileID: 8300000, guid: a3d88ede9041ff54ab99f3f86243d247, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Wal
-    clip: {fileID: 8300000, guid: 628b5bd042d67634ba669231bc8422d4, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Wal
-    clip: {fileID: 8300000, guid: c30c3d1862b73394eadac7726f8c2a4d, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: Wal
-    clip: {fileID: 8300000, guid: d7fc34b8c33f599488a24cb94cf3f272, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  jumps:
-  - name: jump
-    clip: {fileID: 8300000, guid: f60bd4129dd156b4fa759c1e2d3559a5, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  - name: jump
-    clip: {fileID: 8300000, guid: 92da589b2ca842a44ad400f711d6ed16, type: 3}
-    volume: 1
-    pitch: 0
-    loop: 0
-    bypass: 0
-    source: {fileID: 0}
-  filter: {fileID: 0}
-  desiredFreq: 500
-  velFreq: 0
-  freqSpeed: 0.2
-  muted: 0
 --- !u!114 &2059206999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,8 +879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c91cffc37d79e34baa20245f0fba8bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playing: 1
-  done: 0
 --- !u!114 &2059207001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,20 +891,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f8fb24edb87c14192193ea468e97ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ppVolume: {fileID: 1577133342}
-  pp: {fileID: 11400000, guid: 0746befcd16d6a34b8f58a794ac84fa3, type: 2}
-  ppBlur: {fileID: 0}
-  graphics: 1
-  muted: 0
-  blur: 1
-  shake: 1
-  slowmo: 1
-  sensitivity: 1
-  volume: 0
-  music: 0
-  fov: 1
-  cameraShake: 1
-  saveManager: {fileID: 2059206996}
-  moveCamera: {fileID: 0}
-  musicM: {fileID: 2059206995}
-  playerMovement: {fileID: 0}
