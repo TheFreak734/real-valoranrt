@@ -15,7 +15,7 @@ public class movment : MonoBehaviour
     public LayerMask groundMask;
 
     Vector3 velocity;
-    bool isGrounded;
+    bool isGrounded = false;
     // Update is called once per frame
     void Update()
     {
@@ -33,6 +33,15 @@ public class movment : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            velocity.y -= 30;
+        }
+        else
+        {
+
         }
 
         velocity.y += gravity * Time.deltaTime;
