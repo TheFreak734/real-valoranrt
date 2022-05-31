@@ -40,7 +40,7 @@ public class TutorialManager : MonoBehaviour
                 checkMark.SetActive(false);
                 popUps[0].SetActive(false);
                 popUps[1].SetActive(true);
-                if (Input.GetKeyDown(KeyCode.W))
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
                 {
                     popUpIndex++;
                     waitTime = 2;
@@ -60,7 +60,7 @@ public class TutorialManager : MonoBehaviour
                 checkMark.SetActive(false);
                 popUps[1].SetActive(false);
                 popUps[2].SetActive(true);
-                if (Input.GetKeyDown(KeyCode.S))
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
                     popUpIndex++;
                     waitTime = 2;

@@ -25,23 +25,15 @@ public class movment : MonoBehaviour
             velocity.y = -2f;
         }
         float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-        Vector3 move = new Vector3(x, 0, 0);
+        Vector3 move = new Vector3(x, 0, z);
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.W) && isGrounded)
+        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            velocity.y -= 30;
-        }
-        else
-        {
-
         }
 
         velocity.y += gravity * Time.deltaTime;
