@@ -3293,7 +3293,7 @@ GameObject:
   m_Component:
   - component: {fileID: 371695308}
   m_Layer: 3
-  m_Name: cage
+  m_Name: Cage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
