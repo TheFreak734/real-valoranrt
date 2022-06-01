@@ -14,6 +14,8 @@ public class movment : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
+    public float rotationSpeed = 500;
+
     Vector3 velocity;
     bool isGrounded = false;
     // Update is called once per frame
@@ -34,6 +36,13 @@ public class movment : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
+
+        if(move != Vector3.zero)
+        {
+            Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
         }
 
         velocity.y += gravity * Time.deltaTime;
