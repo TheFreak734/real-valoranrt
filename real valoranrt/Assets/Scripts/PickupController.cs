@@ -47,6 +47,7 @@ public class PickupController : MonoBehaviour
     {
         if (pickObj.GetComponent<Rigidbody>())
         {
+            Debug.Log("picked up");
             heldObjRB = pickObj.GetComponent<Rigidbody>();
             heldObjRB.useGravity = false;
             heldObjRB.drag = 10;
@@ -56,8 +57,9 @@ public class PickupController : MonoBehaviour
             heldObj = pickObj;
         }
     }
-    void DropObject()
+    public void DropObject()
     {
+        Debug.Log("dropped");
         heldObjRB.useGravity = true;
         heldObjRB.drag = 1;
         heldObjRB.constraints = RigidbodyConstraints.None;
